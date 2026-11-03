@@ -1,0 +1,85 @@
+###
+GET http://localhost:8080/foods?name=frango
+
+###
+GET http://localhost:8080/foods/1
+
+###
+GET http://localhost:8080/meals
+
+###
+GET http://localhost:8080/meals?date=2026-10-26
+
+###
+POST http://localhost:8080/meals
+Content-Type: application/json
+
+{
+  "mealType": "SNACK",
+  "foodId": 33,
+  "grams": 120
+}
+
+###
+POST http://localhost:8080/meals
+Content-Type: application/json
+
+{
+  "mealType": "SNACK",
+  "foodId": 33,
+  "grams": -5
+}
+
+###
+DELETE http://localhost:8080/meals/1
+
+###
+GET http://localhost:8080/summary
+
+###
+GET http://localhost:8080/profile
+
+###
+PUT http://localhost:8080/profile
+Content-Type: application/json
+
+{
+  "name": "Marina Souza",
+  "goal": "MAINTAIN",
+  "dailyCalories": 2000
+}
+
+###
+POST http://localhost:8080/chat
+Content-Type: application/json
+
+{
+  "conversationId": "teste-1",
+  "message": "Oi! Meu nome é Rafael. Quantos copos de água devo tomar por dia?"
+}
+
+###
+POST http://localhost:8080/chat
+Content-Type: application/json
+
+{
+  "conversationId": "teste-1",
+  "message": "Qual é o meu nome?"
+}
+
+###
+POST http://localhost:8080/chat
+Content-Type: application/json
+
+{
+  "conversationId": "teste-1",
+  "message": "Comi uma banana prata de 120 g no lanche. Registra pra mim e me diz quantas calorias ainda tenho hoje."
+}
+
+###
+POST http://localhost:8080/meals/analyze
+Content-Type: application/json
+
+{
+  "description": "Almocei um prato com arroz, feijão, um bife e salada de alface e tomate"
+}
